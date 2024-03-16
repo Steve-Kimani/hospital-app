@@ -8,6 +8,7 @@ chgrp -R apache /home/ec2-user/
 find /home/ec2-user/ -type d -exec chmod g+rx {} +
 find /home/ec2-user/ -type f -exec chmod g+r {} +
 chown -R ec2-user /home/ec2-user/
+chown -R 775 /home/ec2-user/
 find /home/ec2-user/ -type d -exec chmod u+rwx {} +
 find /home/ec2-user/ -type f -exec chmod u+rw {} +
 
