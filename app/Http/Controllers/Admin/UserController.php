@@ -18,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('role_id', 'asc')->latest()->get();
+        $users = User::orderBy('role_id', 'asc')->whereNot('role_id', 4)->latest()->get();
         $roles = Role::where('id', 2)->orWhere('id', 5)->get();
         $aTimes = AppointmentTime::all();
         $depts = Department::all();

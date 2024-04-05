@@ -22,7 +22,7 @@
                 </div>
              </div>
              <div class="iq-card-body">
-                
+                {{-- <p>Images in Bootstrap are made responsive with <code>.img-fluid</code>. <code>max-width: 100%;</code> and <code>height: auto;</code> are applied to the image so that it scales with the parent element.</p> --}}
                 <div class="table-responsive">
                    <table id="datatable" class="table table-striped table-bordered">
                       <thead>
@@ -31,6 +31,7 @@
                             <th>NAME</th>
                             <th>EMAIL</th>
                             <th>ROLE</th>
+                            <th>DEPARTMENT</th>
                             <th>PHONE NUMBER</th>
                             <th>ALT PHONE NUMBER</th>
                             <th>HOME ADDRESS</th>
@@ -45,6 +46,7 @@
                                     <td>{{ Str::title($doctor->users->name) }}</td>
                                     <td><a href="mailto:{{ $doctor->users->email }}">{{ $doctor->users->email }}</a></td>
                                     <td>{{ $doctor->users->roles->name }} </td>
+                                    <td>{{ $doctor->departments->name }}</td>
                                     <td>{{ $doctor->phone_no }}</td>
                                     <td>{{ $doctor->alt_phone_no }}</td>
                                     <td>{{ $doctor->street_address }}</td>
@@ -74,6 +76,7 @@
                             <th>NAME</th>
                             <th>EMAIL</th>
                             <th>ROLE</th>
+                            <th>DEPARTMENT</th>
                             <th>PHONE NUMBER</th>
                             <th>ALT PHONE NUMBER</th>
                             <th>HOME ADDRESS</th>

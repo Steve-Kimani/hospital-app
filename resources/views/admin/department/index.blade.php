@@ -23,7 +23,7 @@
                 </div>
              </div>
              <div class="iq-card-body">
-                
+                {{-- <p>Images in Bootstrap are made responsive with <code>.img-fluid</code>. <code>max-width: 100%;</code> and <code>height: auto;</code> are applied to the image so that it scales with the parent element.</p> --}}
                 <div class="table-responsive">
                    <table id="datatable" class="table table-striped table-bordered">
                       <thead>
@@ -41,7 +41,7 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ Str::title($dept->name) }}</td>
-                                    <td>0</td>
+                                    <td>{{ $dept->doctors->count() }}</td>
                                     <td>{{ Str::title($dept->users->name) }} </td>
                                     <td>
                                         <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#editDepartment-{{ $dept->id }}">
